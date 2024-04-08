@@ -18,9 +18,9 @@ public class Study_record {
     @Id
     private int key_id ;
 
-    private String STUDY_DAY ;
+    private String Study_day ;
 
-    private String CONTENTS ;
+    private String contents ;
 
     private LocalDateTime reg_day;
 

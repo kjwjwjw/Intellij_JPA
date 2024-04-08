@@ -8,7 +8,7 @@ server:
 spring:
   thymeleaf:
     cache: false # ?? ?? reload
-    prefix: file:src/main/resources/templates # classpath:/templates
+    prefix: classpath:/templates # classpath:/templates
     suffix: .html
 
 --- # mariadb
