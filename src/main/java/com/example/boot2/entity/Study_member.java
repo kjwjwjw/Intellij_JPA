@@ -1,8 +1,7 @@
 package com.example.boot2.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,16 +15,24 @@ import java.time.LocalDateTime;
 @Builder
 @Data
 @Entity
-public class Study_record {
+public class Study_member {
     @Id
-    private int key_id ;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name= "member_id")
+    private int memberId;
 
-    private String Study_day ;
+    @Column(name ="login_id")
+    private String login_id ;
 
-    private String contents ;
+    private String password ;
+
+    private String name ;
+
+    private String role ;
 
     @org.hibernate.annotations.Generated(GenerationTime.ALWAYS)
     @Column(name="reg_day", updatable = false)
-    private LocalDateTime reg_day;
+    private LocalDateTime Member_reg_day;
+
 
 }

@@ -21,8 +21,8 @@ class StudyRecordRepoTest {
 
         for(Study_record record : list) {
             System.out.println(record.getKey_id());
-            System.out.println(record.getSTUDY_DAY());
-            System.out.println(record.getCONTENTS());
+            System.out.println(record.getStudy_day());
+            System.out.println(record.getContents());
             System.out.println(record.getReg_day());
 
 

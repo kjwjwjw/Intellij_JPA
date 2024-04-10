@@ -18,8 +18,8 @@ class StudyRecordServiceTest {
     @Test
     void doInsert() {
         Study_record study_record = Study_record.builder()
-                .STUDY_DAY("2022.08.23")
-                .CONTENTS("Test Insert 진행")
+                .Study_day("2022.08.23")
+                .contents("Test Insert 진행")
                 .reg_day(LocalDateTime.now())
                 .build();
 
@@ -35,7 +35,7 @@ class StudyRecordServiceTest {
         study_record.setCONTENTS("Contents 수정");*/
 
         Study_record study_record = studyRecordService.doSelectOne(3);
-        study_record.setCONTENTS("Contents 수정2");
+        study_record.setContents("Contents 수정2");
 
         studyRecordService.doUpdate(study_record);
     }

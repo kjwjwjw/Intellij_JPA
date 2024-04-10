@@ -6,10 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -50,7 +47,7 @@ public class Con_study {
 
         Study_record study_record = studyRecordService.doSelectOne(Integer.parseInt(strKeyId));
 
-        request.setAttribute("vo_study", study_record);
+        model.addAttribute("vo_study", study_record);
 
         return "/study/study_mod";
     }
@@ -64,6 +61,14 @@ public class Con_study {
         return "redirect:/study/list";
     }
 
+    @GetMapping("/delete")
+    public String doDel(@RequestParam(value = "key_id", defaultValue = "--") String strKeyId) {
+
+        studyRecordService.doDelete(Integer.parseInt(strKeyId));
+
+        return "redirect:/study/list";
+
+    }
 
 
 }
