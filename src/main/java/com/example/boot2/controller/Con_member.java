@@ -35,7 +35,7 @@ public class Con_member {
 
 
     @PostMapping("/insert_exe")
-    public String doInsExe(@ModelAttribute Study_member study_member) {
+    public String doInsExe(@ModelAttribute Study_member study_member) throws Exception {
 
        studyMemberService.doInsert(study_member);
 

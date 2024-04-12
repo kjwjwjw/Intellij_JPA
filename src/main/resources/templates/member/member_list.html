@@ -24,6 +24,7 @@
             <div class="col">아이디</div>
             <div class="col">이름</div>
             <div class="col">권한</div>
+            <div class="col">이메일</div>
             <div class="col">등록일자</div>
             <div class="col">회원삭제</div>
         </div>
@@ -33,6 +34,7 @@
             <div class="col" th:text="${member.login_id}">ID1</div>
             <div class="col" th:text="${member.name}">회원1</div>
             <div class="col" th:text="${member.role}">MEMBER</div>
+            <div class="col" th:text="${member.email}">이메일</div>
             <div class="col" th:text="${member.Member_reg_day}">2022.07.19 08:29</div>
             <div class="col"><a th:href="@{/member/delete(memberId=${member.memberId})}">삭제</a></div>
         </div>

@@ -28,3 +28,9 @@ spring:
       hibernate:
         show_sql : true
         format_sql: true
+
+
+
+--- # Encrypt
+encrypt :
+  key16 : ABCdefg123456plm

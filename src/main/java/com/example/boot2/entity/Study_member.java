@@ -28,6 +28,8 @@ public class Study_member {
 
     private String name ;
 
+    private String email;
+
     private String role ;
 
     @org.hibernate.annotations.Generated(GenerationTime.ALWAYS)
