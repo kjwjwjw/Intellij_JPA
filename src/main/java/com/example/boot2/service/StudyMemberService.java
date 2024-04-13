@@ -39,6 +39,11 @@ public class StudyMemberService {
     }
 
 
+    public Study_member doSelectLoginId(String strLoginId) {
+        return studyMemberRepo.findByLoginId(strLoginId);
+    }
+
+
     /* Insert */
     public void doInsert(Study_member study_member) throws Exception {
         Cm_encrypt cm_encrypt = new Cm_encrypt();
