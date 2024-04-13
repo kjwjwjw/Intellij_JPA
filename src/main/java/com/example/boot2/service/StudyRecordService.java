@@ -14,6 +14,8 @@ public class StudyRecordService {
     StudyRecordRepo studyRecordRepo;
 
     public List<Study_record> doSelectAll() {
+      /*  return studyRecordRepo.findJpql();*/
+
         return studyRecordRepo.findAll();
     }
 

@@ -31,11 +31,11 @@
 
         <th:block th:each="member:${list}">
         <div class="row mb-2">
-            <div class="col" th:text="${member.login_id}">ID1</div>
+            <div class="col" th:text="${member.loginId}">ID1</div>
             <div class="col" th:text="${member.name}">회원1</div>
             <div class="col" th:text="${member.role}">MEMBER</div>
             <div class="col" th:text="${member.email}">이메일</div>
-            <div class="col" th:text="${member.Member_reg_day}">2022.07.19 08:29</div>
+            <div class="col" th:text="${member.member_regday}">2022.07.19 08:29</div>
             <div class="col"><a th:href="@{/member/delete(memberId=${member.memberId})}">삭제</a></div>
         </div>
         </th:block>

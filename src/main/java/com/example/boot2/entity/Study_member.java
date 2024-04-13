@@ -22,7 +22,7 @@ public class Study_member {
     private int memberId;
 
     @Column(name ="login_id")
-    private String login_id ;
+    private String loginId ;
 
     private String password ;
 
@@ -33,8 +33,8 @@ public class Study_member {
     private String role ;
 
     @org.hibernate.annotations.Generated(GenerationTime.ALWAYS)
-    @Column(name="reg_day", updatable = false)
-    private LocalDateTime Member_reg_day;
+    @Column(name="member_regday", updatable = false)
+    private LocalDateTime member_regday;
 
 
 }

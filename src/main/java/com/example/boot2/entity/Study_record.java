@@ -1,8 +1,6 @@
 package com.example.boot2.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,4 +26,11 @@ public class Study_record {
     @Column(name="reg_day", updatable = false)
     private LocalDateTime reg_day;
 
+    @org.hibernate.annotations.Generated(GenerationTime.ALWAYS)
+    @Column(name="mod_day", updatable = false)
+    private LocalDateTime mod_day;
+
+    @ManyToOne
+    @JoinColumn(name="member_id")
+    private Study_member study_member;
 }

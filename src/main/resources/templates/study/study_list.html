@@ -25,6 +25,7 @@
         <div class="row mb-2">
             <div class="col">Key_Id(Vo)</div>
             <div class="col">공부일자</div>
+            <div class="col">이름</div>
             <div class="col">공부내용</div>
             <div class="col">등록일자</div>
             <div class="col">수정</div>
@@ -35,6 +36,7 @@
         <div class="row mb-2">
             <div class="col" th:text="${study.key_id}">Key_Id</div>
             <div class="col" th:text="${study.Study_day}">공부일자</div>
+            <div class="col" th:text="${study.Study_member.Name}">이름</div>
             <div class="col" th:text="${study.contents}">공부내용</div>
             <div class="col" th:text="${study.reg_day}">등록일자</div>
             <div class="col"><a th:href="@{/study/modify(key_id=${study.key_id})}">수정</a></div>
