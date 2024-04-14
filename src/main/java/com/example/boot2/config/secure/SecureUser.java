@@ -30,6 +30,6 @@ public class SecureUser implements UserDetailsService {
         List<GrantedAuthority> authorities = new ArrayList<>();
         authorities.add(new SimpleGrantedAuthority(vo_member.getRole()));
 
-        return new User(vo_member.getLoginId(), "{noop}"+vo_member.getPassword(), authorities);
+        return new User(vo_member.getLoginId(), "{SHA-256}"+vo_member.getPassword(), authorities);
     }
 }
